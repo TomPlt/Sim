@@ -4,4 +4,9 @@
 
 ## Training the RL-Agent 
 
-![winrate-over_epoch](python\win_percentages.png)
+<img src="python/win_percentages.png" alt="winrate-over_epoch" width="600"/>
+
+## Playing the Game in Godot Game Engine
+
+![game](images/sim.gif)
+test
