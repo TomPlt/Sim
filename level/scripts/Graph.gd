@@ -5,6 +5,7 @@ enum Turn {
 	BOT
 }
 
+var GameOverScreen = preload("res://level/gameover.tscn")
 var player_matrix = Array()
 var bot_matrix = Array()
 var current_turn = Turn.PLAYER
@@ -43,7 +44,9 @@ func _on_edge_activated(node1_name, node2_name):
 		
 		print("Player: ", int(node1_name), " ", int(node2_name))
 		var found_triangle = has_triangle(player_matrix)
-		if found_triangle: print('Player lost the game')
+		if found_triangle:
+			print('Player lost the game')
+			show_game_over_screen("Player Lost")
 		else: end_player_turn()
 
 func bot_turn():
@@ -58,6 +61,7 @@ func bot_turn():
 		print("Bot: ", i, " ", j)
 		if has_triangle(bot_matrix):
 			print("Bot has lost the game")
+			show_game_over_screen("Bot Lost")
 		else:
 			end_bot_turn()
 			
@@ -82,3 +86,13 @@ func get_unconnected_edges():
 			unconnected.append(edge)
 	return unconnected
 
+func show_game_over_screen(message: String):
+	var game_over_instance = GameOverScreen.instantiate()
+		# Connect the restart_game signal from the GameOverScreen instance to the _restart_game method
+	game_over_instance.connect("restart_game", Callable(self, "_restart_game"))
+	add_child(game_over_instance)
+	game_over_instance.get_child(1).get_node("Message").text = message
+
+func _restart_game():
+	# Example: To simply reload the current scene.
+	get_tree().reload_current_scene()

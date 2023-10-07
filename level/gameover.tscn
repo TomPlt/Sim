@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://p6wowspoj6p"]
+
+[ext_resource type="Script" path="res://level/scripts/Gameover.gd" id="1_xhkf7"]
+
+[sub_resource type="FontFile" id="FontFile_ionba"]
+cache/0/200/0/ascent = 0.0
+cache/0/200/0/descent = 0.0
+cache/0/200/0/underline_position = 0.0
+cache/0/200/0/underline_thickness = 0.0
+cache/0/200/0/scale = 1.0
+cache/0/200/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/200/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/200/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+
+[sub_resource type="Theme" id="Theme_uru4m"]
+default_font = SubResource("FontFile_ionba")
+default_font_size = 50
+
+[sub_resource type="FontFile" id="FontFile_67v4u"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/200/0 = Vector2(0, 0)
+cache/0/200/0/ascent = 0.0
+cache/0/200/0/descent = 0.0
+cache/0/200/0/underline_position = 0.0
+cache/0/200/0/underline_thickness = 0.0
+cache/0/200/0/scale = 1.0
+cache/0/200/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/200/0/kerning_overrides/200/0 = Vector2(0, 0)
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -873.0
+offset_top = -412.0
+offset_right = 392.0
+offset_bottom = 140.0
+scale = Vector2(1.5, 1.5)
+tooltip_text = "
+"
+script = ExtResource("1_xhkf7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+offset_top = 1.0
+offset_right = 1084.0
+offset_bottom = 553.0
+color = Color(0.509804, 0.509804, 0.509804, 0.784314)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1084.0
+offset_bottom = 555.0
+theme = SubResource("Theme_uru4m")
+alignment = 1
+
+[node name="Message" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 200
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontFile_67v4u")
+theme_override_font_sizes/font_size = 200
+text = "Restart!
+"
+
+[connection signal="restart_game" from="." to="." method="_on_restart_game"]
+[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]

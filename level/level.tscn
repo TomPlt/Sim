@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c16dkv7t0f5yc"]
+[gd_scene load_steps=4 format=3 uid="uid://c16dkv7t0f5yc"]
 
 [ext_resource type="PackedScene" uid="uid://cpx6u8wewpaux" path="res://level/graph.tscn" id="1_mnrig"]
 [ext_resource type="Script" path="res://level/level.gd" id="1_suggs"]
+[ext_resource type="PackedScene" uid="uid://xg0gpw2hslvx" path="res://level/player_legend.tscn" id="3_xglsx"]
 
 [node name="Level" type="Node2D"]
 position = Vector2(576, 317)
@@ -9,3 +10,9 @@ scale = Vector2(0.15, 0.15)
 script = ExtResource("1_suggs")
 
 [node name="Graph" parent="." instance=ExtResource("1_mnrig")]
+
+[node name="Legend" parent="." instance=ExtResource("3_xglsx")]
+offset_left = -2333.33
+offset_top = -1540.0
+offset_right = -2333.33
+offset_bottom = -1540.0
