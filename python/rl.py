@@ -35,7 +35,7 @@ class QLearningAgent:
         self.q_table[(old_state, action)] = old_q_value + self.learning_rate * (reward + self.discount_factor * max_new_q_value - old_q_value)
         self.exploration_rate *= self.exploration_decay
 
-    def save(self, filename="Sim\q_agent.pkl.pkl"):
+    def save(self, filename="python\q_agent.pkl"):
         with open(filename, 'wb') as file:
             pickle.dump({
                 'q_table': self.q_table,
@@ -44,7 +44,7 @@ class QLearningAgent:
                 'exploration_rate': self.exploration_rate,
                 'exploration_decay': self.exploration_decay
             }, file)
-    def load(self, filename="q_agent.pkl"):
+    def load(self, filename="python\q_agent.pkl"):
         with open(filename, 'rb') as file:
             data = pickle.load(file)
             self.q_table = data['q_table']
