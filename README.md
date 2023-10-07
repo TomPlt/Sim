@@ -4,4 +4,4 @@
 
 ## Training the RL-Agent 
 
-[winrate-over_epoch](python\win_percentages.png)
+![winrate-over_epoch](python\win_percentages.png)
