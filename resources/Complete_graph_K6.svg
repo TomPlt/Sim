@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="10552" height="10352" id="Complete graph K6">
+<g style="fill:none;stroke:black;stroke-width:70" transform="translate(276, 176)">
+  <path d="M 2500,670 L 10000,5000 2500,9330 2500,670 7500,9330 0,5000 7500,670 7500,9330  M 10000,5000 L 0,5000"/>
+  <polyline points="7500,670 10000,5000 7500,9330 2500,9330 0,5000 2500,670 7500,670 2500,9330"/>
+<g style="fill:blue;stroke:black;stroke-width:70">
+  <circle cx="7500" cy="670" r="200"/>
+  <circle cx="10000" cy="5000" r="200"/>
+  <circle cx="7500" cy="9330" r="200"/>
+  <circle cx="2500" cy="9330" r="200"/>
+  <circle cx="0" cy="5000" r="200"/>
+  <circle cx="2500" cy="670" r="200"/>
+</g></g>
+</svg>

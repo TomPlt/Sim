@@ -1,0 +1,310 @@
+[gd_scene load_steps=8 format=3 uid="uid://bt0yciyhpbrxx"]
+
+[ext_resource type="Script" path="res://level/scripts/HighlightLine.gd" id="1_igpad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uh8d"]
+size = Vector2(3093.33, 33.3333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atee4"]
+size = Vector2(3075.17, 33.9602)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnvc4"]
+size = Vector2(43.8899, 2651.32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8t2s"]
+size = Vector2(1421.67, 26.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eesn5"]
+size = Vector2(1489.75, 61.9625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2s13"]
+size = Vector2(2658.33, 25)
+
+[node name="Edges" type="Node2D"]
+
+[node name="Line1" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-1340, 20)
+script = ExtResource("1_igpad")
+node1_name = "0"
+node2_name = "5"
+
+[node name="1" type="Line2D" parent="Line1"]
+position = Vector2(1340, -20)
+points = PackedVector2Array(-1520, -26, 1566.67, -20)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line1"]
+position = Vector2(1366.67, -40)
+shape = SubResource("RectangleShape2D_7uh8d")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Line2" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "1"
+node2_name = "4"
+
+[node name="2" type="Line2D" parent="Line2"]
+points = PackedVector2Array(740, 1326.67, -766.667, -1393.33)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2"]
+position = Vector2(-6.6665, -19.9998)
+rotation = 1.06332
+shape = SubResource("RectangleShape2D_atee4")
+
+[node name="Line3" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "1"
+node2_name = "5"
+
+[node name="3" type="Line2D" parent="Line3"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-1529, 12, 706.666, 1353.33)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line3"]
+position = Vector2(-409.2, 674.833)
+rotation = -1.02974
+shape = SubResource("RectangleShape2D_vnvc4")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Line4" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "2"
+node2_name = "0"
+
+[node name="4" type="Line2D" parent="Line4"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-733.334, 1373.33, 1580, 33.3334)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line4"]
+position = Vector2(446.423, 693.804)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_vnvc4")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Line5" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "3"
+node2_name = "4"
+
+[node name="5" type="Line2D" parent="Line5"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-720, -1426.67, 693.333, -1426.67)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line5"]
+position = Vector2(-6.6665, -1426.67)
+shape = SubResource("RectangleShape2D_u8t2s")
+
+[node name="Line6" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "4"
+node2_name = "5"
+
+[node name="6" type="Line2D" parent="Line6"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-813.334, -1380, -1551, -98)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line6"]
+position = Vector2(-1166.67, -740)
+rotation = -1.0472
+shape = SubResource("RectangleShape2D_eesn5")
+
+[node name="Line7" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "5"
+node2_name = "2"
+
+[node name="7" type="Line2D" parent="Line7"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-1564, 42, -826.667, 1333.33)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line7"]
+position = Vector2(-1182.7, 676.91)
+rotation = -2.0944
+shape = SubResource("RectangleShape2D_eesn5")
+
+[node name="Line8" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "3"
+node2_name = "5"
+
+[node name="8" type="Line2D" parent="Line8"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-1531, -77, 713.333, -1380)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line8"]
+position = Vector2(-393.622, -739.833)
+rotation = 1.0472
+shape = SubResource("RectangleShape2D_vnvc4")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Line9" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "0"
+node2_name = "4"
+
+[node name="9" type="Line2D" parent="Line9"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-760, -1393.33, 1557.01, -59.895, 1580, -46.6666)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line9"]
+position = Vector2(433.334, -720)
+rotation = -1.0472
+shape = SubResource("RectangleShape2D_vnvc4")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Line10" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "2"
+node2_name = "3"
+
+[node name="10" type="Line2D" parent="Line10"]
+position = Vector2(20, 13.3334)
+points = PackedVector2Array(740, -1360, -753.334, 1320)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line10"]
+position = Vector2(23.3918, -15.1481)
+rotation = 2.07694
+shape = SubResource("RectangleShape2D_atee4")
+
+[node name="Line11" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "0"
+node2_name = "3"
+
+[node name="11" type="Line2D" parent="Line11"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(826.667, -1373.33, 1605, -68)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line11"]
+position = Vector2(1231.35, -718.455)
+rotation = -2.0944
+shape = SubResource("RectangleShape2D_eesn5")
+
+[node name="Line12" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "1"
+node2_name = "3"
+
+[node name="12" type="Line2D" parent="Line12"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(766.666, -1360, 766.666, 1320)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line12"]
+position = Vector2(779.167, -24.1669)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_a2s13")
+
+[node name="Line13" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "2"
+node2_name = "4"
+
+[node name="13" type="Line2D" parent="Line13"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(-786.667, -1393.33, -780, 1333.33)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line13"]
+position = Vector2(-766.667, -20)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_a2s13")
+
+[node name="Line14" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-13.3335, 0)
+script = ExtResource("1_igpad")
+node1_name = "0"
+node2_name = "1"
+
+[node name="14" type="Line2D" parent="Line14"]
+position = Vector2(13.3335, 0)
+points = PackedVector2Array(826.666, 1340, 1624, 71)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line14"]
+position = Vector2(1253.33, 706.667)
+rotation = -1.02102
+shape = SubResource("RectangleShape2D_eesn5")
+
+[node name="Line15" type="Area2D" parent="." groups=["GraphComponentsGroup"]]
+position = Vector2(-26.6667, -6.66663)
+script = ExtResource("1_igpad")
+node1_name = "1"
+node2_name = "2"
+
+[node name="15" type="Line2D" parent="Line15"]
+position = Vector2(26.6667, 6.66663)
+points = PackedVector2Array(693.333, 1393.33, -706.667, 1380)
+width = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line15"]
+position = Vector2(6.66675, 1400)
+shape = SubResource("RectangleShape2D_u8t2s")
+
+[connection signal="input_event" from="Line1" to="Line1" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line1" to="Line1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line1" to="Line1" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line2" to="Line2" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line2" to="Line2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line2" to="Line2" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line3" to="Line3" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line3" to="Line3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line3" to="Line3" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line4" to="Line4" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line4" to="Line4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line4" to="Line4" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line5" to="Line5" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line5" to="Line5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line5" to="Line5" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line6" to="Line6" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line6" to="Line6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line6" to="Line6" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line7" to="Line7" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line7" to="Line7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line7" to="Line7" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line8" to="Line8" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line8" to="Line8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line8" to="Line8" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line9" to="Line9" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line9" to="Line9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line9" to="Line9" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line10" to="Line10" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line10" to="Line10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line10" to="Line10" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line11" to="Line11" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line11" to="Line11" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line11" to="Line11" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line12" to="Line12" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line12" to="Line12" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line12" to="Line12" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line13" to="Line13" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line13" to="Line13" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line13" to="Line13" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line14" to="Line14" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line14" to="Line14" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line14" to="Line14" method="_on_mouse_exited"]
+[connection signal="input_event" from="Line15" to="Line15" method="_on_input_event"]
+[connection signal="mouse_entered" from="Line15" to="Line15" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Line15" to="Line15" method="_on_mouse_exited"]
